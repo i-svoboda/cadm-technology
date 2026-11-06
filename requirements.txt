@@ -1,0 +1,7 @@
+jsonschema
+matplotlib
+networkx
+numpy
+psutil
+pytest
+scipy
