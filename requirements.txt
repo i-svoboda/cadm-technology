@@ -1,7 +1,7 @@
-jsonschema
-matplotlib
-networkx
-numpy
-psutil
-pytest
-scipy
+jsonschema==4.26.0
+matplotlib==3.11.0
+networkx==3.6.1
+numpy==2.4.3
+psutil==7.2.2
+pytest==9.1.0
+scipy==1.17.1

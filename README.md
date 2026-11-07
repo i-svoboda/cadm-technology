@@ -1,23 +1,49 @@
-# Controlled automation of decision making
+# Програми інформаційної технології контрольованої автоматизації прийняття рішень
 
-These are the programs behind my PhD thesis «Методи і технології прийняття рішень в сфері кібербезпеки на основі генеративного штучного інтелекту» (Igor Sikorsky Kyiv Polytechnic Institute, 2026). The thesis calls the technology КАПР, and the English name is CADM.
+Автор: Свобода Ігор Максимович ([ORCID 0009-0001-1709-2904](https://orcid.org/0009-0001-1709-2904))
 
-Це програми до дисертації. Опис технології наведено в розділі 5, а її модулі перелічено в таблиці в репозиторії [dissertation-supplement](https://github.com/i-svoboda/dissertation-supplement).
+Дисертація: «Методи і технології прийняття рішень в сфері кібербезпеки на основі генеративного штучного інтелекту»
 
-| Folder | What it does | Thesis chapter |
+Ступінь і спеціальність: доктор філософії, 125 «Кібербезпека та захист інформації»
+
+Науковий керівник: Ланде Дмитро Володимирович, доктор технічних наук, професор
+
+Заклад: кафедра інформаційної безпеки, Навчально-науковий фізико-технічний інститут, Національний технічний університет України «Київський політехнічний інститут імені Ігоря Сікорського»
+
+У цьому репозиторії розміщено основні програмні модулі інформаційної технології контрольованої автоматизації прийняття рішень (КАПР), описаної в розділі 5 дисертації. Англійська назва технології – CADM (controlled automation of decision making).
+
+## Структура
+
+| Каталог | Призначення | Розділ дисертації |
 |:--|:--|:--|
-| `chapter2_scenarios` | checks generated scenario documents, compares them with the reference model, ranks scenarios and runs the sensitivity analysis | 2 |
-| `chapter3_ahp_anp` | asks virtual experts through the Codex command line tool, then computes AHP and ANP priorities and the portfolio | 3 |
-| `chapter4_stability` | runs the repeated questionnaires and estimates variance shares and the probabilities of ranks and pairs | 4 |
-| `chapter4_scenario_check` | applies the stability method to the attack scenario variants and compares it with the analysts | 4, 5 |
-| `chapter5_controls` | applies the technology to the protection measures of the distribution system operator | 5 |
+| `chapter2_scenarios` | перевірка згенерованих документів сценаріїв, зіставлення з еталонною моделлю, ранжування сценаріїв і аналіз чутливості | 2 |
+| `chapter3_ahp_anp` | опитування віртуальних експертів, пріоритети методів аналізу ієрархій та аналітичних мереж, вибір портфеля засобів захисту | 3 |
+| `chapter4_stability` | повторні анкети, частки дисперсії, імовірності рангів і переваг | 4 |
+| `chapter4_scenario_check` | оцінювання стійкості для варіантів сценаріїв атак і зіставлення з аналітиками | 4, 5 |
+| `chapter5_controls` | застосування технології до засобів захисту оператора системи розподілу | 5 |
 
-## What is left out
+Модулі та етапи технології, які вони виконують, перелічено в [таблиці](https://github.com/i-svoboda/dissertation-supplement/blob/main/tables/program_modules.md) репозиторію матеріалів. Там само наведено інструкції та анкети для моделей.
 
-The reference model, the generated scenarios and the records of model calls are not here, because they describe attack paths on critical infrastructure. Members of the defence council and the official opponents can get them through the department on request. The stored model answers are left out for the same reason, so these programs can't be run from this repository alone.
+## Середовище
 
-The code is as it was run, apart from the path to the Codex tool on my computer and one note in `chapter3_ahp_anp/protocol_data.py`. `unmatched_content.py` from chapter 2 is left out because it quotes generated labels. The separate analysis programs in the last row of the module table will come later, after review.
+Програми написано мовою Python 3.13, а версії бібліотек наведено у файлі `requirements.txt`. Модулі опитування звертаються до моделей через інтерфейс командного рядка Codex.
 
-## Licence
+## Обмеження
 
-MIT, see `LICENSE`.
+Еталонна модель, згенеровані сценарії, записи звернень до моделей і збережені відповіді тут не наводяться, оскільки вони описують шляхи атак на об'єкти критичної інфраструктури. Тому програми не можна запустити лише з цього репозиторію. Членам разової спеціалізованої вченої ради та офіційним опонентам ці дані надаються на запит через кафедру.
+
+Код наведено в тому вигляді, у якому його запускали, крім шляху до інструменту Codex і однієї примітки у файлі `chapter3_ahp_anp/protocol_data.py`. Файл `unmatched_content.py` не наведено, оскільки він містить уривки згенерованих назв подій. Програми аналізу результатів надаються на запит.
+
+Під час написання програм використовувалися інструменти штучного інтелекту, перелік яких наведено в дисертації.
+
+## Як цитувати
+
+Свобода І. М. Програми інформаційної технології контрольованої автоматизації прийняття рішень : репозиторій GitHub. Версія 1.0.0. 2026. URL: https://github.com/i-svoboda/cadm-technology
+
+## Ліцензія
+
+Програми поширюються за ліцензією MIT (див. `LICENSE`).
+
+## English summary
+
+Core programs of the controlled automation of decision making (CADM) technology from the PhD thesis of Igor Svoboda (Igor Sikorsky Kyiv Polytechnic Institute, 2026). The reference model, generated scenarios and model records are withheld, because they describe attack paths on critical infrastructure, so the programs can't be run from this repository alone.

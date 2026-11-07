@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Якщо ви використовуєте ці програми, цитуйте їх так."
+type: software
+title: "Програми інформаційної технології контрольованої автоматизації прийняття рішень"
+version: 1.0.0
+date-released: 2026-11-07
+license: MIT
+repository-code: "https://github.com/i-svoboda/cadm-technology"
+authors:
+  - family-names: Svoboda
+    given-names: Igor
+    orcid: "https://orcid.org/0009-0001-1709-2904"
+    affiliation: "Igor Sikorsky Kyiv Polytechnic Institute"
+keywords:
+  - cybersecurity
+  - decision support
+  - large language models
+  - analytic hierarchy process
+  - analytic network process
